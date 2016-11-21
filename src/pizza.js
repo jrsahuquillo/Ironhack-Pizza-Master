@@ -3,15 +3,15 @@
 var total = 21;
 $('strong').text("$" + total);
 $('.btn-pepperonni').on('click', function(){
-  $('[class^=pep]').toggle();
+  $('[class^=pep]').fadeToggle();
   $('.btn-pepperonni').toggleClass('active');
   //deactivate('.btn-pepperonni');
   if ($('.btn-pepperonni').hasClass('active')){
       $('strong').text("$" + (total +=1));
-      $("ul > li:contains('pepperonni')").css("display", "list-item");
+      $("ul > li:contains('pepperonni')").fadeIn(500);
     } else {
       $('strong').text("$" + (total -=1));
-      $("ul > li:contains('pepperonni')").css("display", "none");
+      $("ul > li:contains('pepperonni')").fadeOut(500);
     }
 });
 
@@ -21,26 +21,26 @@ function deactivate(selector){
 }
 
 $('.btn-mushrooms').on('click', function(){
-  $('.cap, .stem').toggle();
+  $('.cap, .stem').fadeToggle();
   $('.btn-mushrooms').toggleClass('active');
   if ($('.btn-mushrooms').hasClass('active')){
       $('strong').text("$" + (total +=1));
-      $("ul > li:contains('mushrooms')").css("display", "list-item");
+      $("ul > li:contains('mushrooms')").fadeIn(500);
     } else {
       $('strong').text("$" + (total -=1));
-      $("ul > li:contains('mushrooms')").css("display", "none");
+      $("ul > li:contains('mushrooms')").fadeOut(500);
     }
 });
 
 $('.btn-green-peppers').on('click', function(){
-  $('.green-pepper').toggle();
+  $('.green-pepper').fadeToggle();
   $('.btn-green-peppers').toggleClass('active');
   if ($('.btn-green-peppers').hasClass('active')){
       $('strong').text("$" + (total +=1));
-      $("ul > li:contains('green peppers')").css("display", "list-item");
+      $("ul > li:contains('green peppers')").fadeIn(500);
     } else {
       $('strong').text("$" + (total -=1));
-      $("ul > li:contains('green peppers')").css("display", "none");
+      $("ul > li:contains('green peppers')").fadeOut(500);
     }
 });
 
@@ -49,14 +49,14 @@ $(document).on('ready', function(){
 });
 
 $('.btn-sauce').on('click', function(){
-  $('.sauce-white').toggle();
+  $('.sauce-white').fadeToggle();
   $('.btn-sauce').toggleClass('active');
   if ($('.btn-sauce').hasClass('active')){
       $('strong').text("$" + (total +=3));
-      $("ul > li:contains('white sauce')").css("display", "list-item");
+      $("ul > li:contains('white sauce')").fadeIn(500);
     } else {
       $('strong').text("$" + (total -=3));
-      $("ul > li:contains('white sauce')").css("display", "none");
+      $("ul > li:contains('white sauce')").fadeOut(500);
     }
 });
 
@@ -69,9 +69,9 @@ $('.btn-crust').on('click', function(){
   // }
   if ($('.btn-crust').hasClass('active')){
       $('strong').text("$" + (total +=5));
-      $("ul > li:contains('gluten-free crust')").css("display", "list-item");
+      $("ul > li:contains('gluten-free crust')").fadeIn(500);
     } else {
       $('strong').text("$" + (total -=5));
-      $("ul > li:contains('gluten-free crust')").css("display", "none");
+      $("ul > li:contains('gluten-free crust')").fadeOut(500);
     }
 });
